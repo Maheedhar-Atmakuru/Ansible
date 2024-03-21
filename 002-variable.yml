@@ -4,8 +4,29 @@
   vars: 
     URL: play.google.com    # Play level variables : if you declare a variable at pley level, all tasks of the play can inherit
   tasks:
-    - name: Task1 of play1
+    - name: Printing play level varibale
       ansible.builtin.debug:
-        msg: Value of URL is {{URL}}    # in bash, we use "echo $var"
+        msg: Value of URL is {{URL}}    # in bash, we use "echo $URL"
 
-        
+
+    - name: printing task levl variable
+      ansible.builtin.debug:
+        msg: Value of URL is {{URL}}
+      vars:                               #Task level variables : if you declare a variable at task levl, only that task can use 
+        URL: task.google.com
+
+# Variable precedence : CLI variable > task variable > play variables
+
+    - name: printing city name from CLI 
+      ansible.builtin.debug:
+        msg: "{{city}}"                  # when using only variable enclose them in double quotes
+      vars:                               #Task level variables : if you declare a variable at task levl, only that task can use 
+        URL: task.google.com
+
+
+### When to use quotes and when not to use quotes in YAML, while dealing with variables ?
+### ---> if in your print msg, if you just have variables , then it's must to enclose them in double quotes 
+
+### How to take input from CLI
+### use -e to pass the variable value from CLI
+### Example : 
