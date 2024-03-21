@@ -10,3 +10,14 @@
 
     1) Manual way   (No Code Approach and it's 100% not recommended)
     2) Automated way(YAML : Playbooks: 100% )
+
+### Install Ansible :
+
+
+to ansible, we need to supply the list of servers that needs to be managed by Ansible and we call that file as INVENTORY file.
+
+    inventory file
+    Destination Server Username & Password
+
+
+### Ansible 
