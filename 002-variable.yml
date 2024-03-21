@@ -1,0 +1,11 @@
+# In ansible, If you attempt to print a variable that is not declared, ANSIBLE throws an exception
+- name: Play1
+  hosts: all
+  vars: 
+    URL: play.google.com    # Play level variables : if you declare a variable at pley level, all tasks of the play can inherit
+  tasks:
+    - name: Task1 of play1
+      ansible.builtin.debug:
+        msg: Value of URL is {{URL}}    # in bash, we use "echo $var"
+
+        

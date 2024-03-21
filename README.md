@@ -64,5 +64,6 @@ no two tasks of playbook cannot have same name
 
 ### how to run a playbook ?
 
-    ``` 
+    ``` $ ansible-playbook -i inv -e ansible_user=centos -e ansble_password=DevOpss321 001-playbook.yaml ```
+    
 
