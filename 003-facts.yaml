@@ -1,0 +1,3 @@
+# Whenever ansible runs the playbooks, it firsts collects the properties of all the machines and then it will start doing the play.google.com
+# what is a fact?
+# A fact is nothing butnthe properties of VM's
