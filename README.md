@@ -60,4 +60,9 @@ A task is nothing an action that you want ansible to perform
 
 Ansible expects the playbook with extension either .yaml or .yml
 
+no two tasks of playbook cannot have same name
+
+### how to run a playbook ?
+
+    ``` 
 
