@@ -1,3 +1,8 @@
+#Tags are 
+# How to run tasks with specific tag ?
+# ansible-playbook -i inv -e ansible_user=centos -e ansble_password=DevOpss321 001-playbook.yaml -t app  (This command runs only tasks with tag app)
+
+
 - name: Demo on tasks 
   hosts: all 
   tasks:

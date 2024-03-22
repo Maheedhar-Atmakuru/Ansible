@@ -6,7 +6,7 @@
     - name: Run this only when the Distro is Centos
       ansible.builtin.debug:
         msg: OS Distro is {{ansible_distribution}} 
-      when: ansible_distribution == "CentOS"
+      when: ansible_distribution == "CentOS"  # In conditionals variables need not e enclosed in {{}}
 
     - name: Run this only when the Distro is Ubuntu
       ansible.builtin.debug:
